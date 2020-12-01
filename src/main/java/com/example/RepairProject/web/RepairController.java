@@ -15,6 +15,7 @@ public class RepairController {
 	@Autowired
 	private RepairRepository repository;
 	
+	
 	@RequestMapping("/repairList")
 	public String repairList(Model model) {
 		model.addAttribute("repairs", repository.findAll());
