@@ -51,5 +51,12 @@ public class RepairController {
 		return "add";
 		
 	}
+	@GetMapping("/sort")
+	public String sort(Repair repair, RepairRepository repository) {
+		
+		repository.findByDateDesc(repair.getDate());
+		
+		return "repairlist";
+	}
 
 }
