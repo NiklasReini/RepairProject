@@ -52,6 +52,14 @@ public class Repair {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
 	
 	
 }
