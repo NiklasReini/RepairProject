@@ -1,7 +1,5 @@
 package com.example.RepairProject.domain;
 
-import java.awt.Image;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,16 +12,14 @@ public class Repair {
 	private long id;
 	private String title, description;
 	private int price;
-	private Image img;
 	
 	public Repair() {}
 	
-	public Repair(String title, String description, int price, Image img) {
+	public Repair(String title, String description, int price) {
 		super();
 		this.title = title;
 		this.description = description;
 		this.price = price;
-		this.img = img;
 	}
 	public long getId() {
 		return id;
@@ -49,15 +45,6 @@ public class Repair {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-
-	public Image getImg() {
-		return img;
-	}
-
-	public void setImg(Image img) {
-		this.img = img;
-	}
-	
 	
 	
 }

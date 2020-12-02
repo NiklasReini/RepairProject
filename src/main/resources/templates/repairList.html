@@ -14,7 +14,6 @@
 				<td th:text="${repair.title}"></td>
 				<td th:text="${repair.description}"></td>
 				<td th:text="${repair.price}"></td>
-				<td th:image="${repair.img}"></td>
 				<td><a class="btn btn-danger"  th:href="@{/delete/{id}(id=${repair.id})}">Delete</a></td>
 				<td><a class="btn btn-danger" th:href="@{/edit/{id}(id=${repair.id})}">Edit</a></td>
 			</tr>
