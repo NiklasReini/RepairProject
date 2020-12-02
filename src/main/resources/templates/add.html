@@ -9,12 +9,14 @@
 <h1>Add Repair</h1>
 <div>
 	<form th:object="${repair}"th:action="@{save}"action="#"method="post">
-		<label for="auth">title</label>
+		<label for="auth">Title</label>
 		<input type="text"id="auth"th:field="*{title}"/>
-		<label for="titl">description</label>
+		<label for="titl">Description</label>
 		<input type="text"id="titl"th:field="*{description}"/>
-		<label for="isbn">price</label>
+		<label for="isbn">Price</label>
 		<input type="text" id="isbn" th:field="*{price}"/>
+		<label for="date">Date</label>
+		<input type="text" id="date" th:field="*{date}"/>
 		<input type="submit"value="Save"></input>
 	</form>
 </div>

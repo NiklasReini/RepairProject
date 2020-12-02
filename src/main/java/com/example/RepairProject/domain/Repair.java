@@ -1,9 +1,13 @@
 package com.example.RepairProject.domain;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Repair {
@@ -12,14 +16,17 @@ public class Repair {
 	private long id;
 	private String title, description;
 	private int price;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	private Date date;
 	
 	public Repair() {}
 	
-	public Repair(String title, String description, int price) {
+	public Repair(String title, String description, int price, Date date) {
 		super();
 		this.title = title;
 		this.description = description;
 		this.price = price;
+		this.date = date;
 	}
 	public long getId() {
 		return id;
