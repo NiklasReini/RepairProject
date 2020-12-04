@@ -17,13 +17,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+import com.example.RepairProject.web.UserService;
+
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled= true)
 public class Security extends WebSecurityConfigurerAdapter {
 	 @Autowired
-	    private UserDetailsService userDetailsService;	
+	    private UserService userDetailsService;	
 		
 	    @Override
 	    protected void configure(HttpSecurity http) throws Exception {
@@ -34,7 +36,7 @@ public class Security extends WebSecurityConfigurerAdapter {
 	          .anyRequest().authenticated()
 	          .and()
 	      .formLogin()
-	          .defaultSuccessUrl("/repairList")
+	          .defaultSuccessUrl("/home")
 	          .permitAll()
 	          .and()
 	      .logout()
