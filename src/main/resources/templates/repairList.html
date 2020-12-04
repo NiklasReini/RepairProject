@@ -10,7 +10,7 @@
 	<h1>Repairs</h1>
 	<a  class="btn btn-dark" th:href="@{/sortByDate}">Sort by date</a>
 	<a  class="btn btn-dark" th:href="@{/sortByPrice}">Sort by price</a>
-	<table class="table table-striped">
+	<table class="table table-bordered">
 		<tbody>
 			<tr th:each = "repair : ${repairs}">
 				<td th:text="${repair.title}"></td>
