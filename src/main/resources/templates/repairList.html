@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h1>Repairs</h1>
-	<a  class="btn btn-success" th:href="@{/sortByDate}">Sort by date</a>
-	<a  class="btn btn-success" th:href="@{/sortByPrice}">Sort by price</a>
+	<a  class="btn btn-dark" th:href="@{/sortByDate}">Sort by date</a>
+	<a  class="btn btn-dark" th:href="@{/sortByPrice}">Sort by price</a>
 	<table class="table table-striped">
 		<tbody>
 			<tr th:each = "repair : ${repairs}">
@@ -17,8 +17,8 @@
 				<td th:text="${repair.description}"></td>
 				<td th:text="${repair.price}"></td>
 				<td th:text="${#dates.format(repair.date, 'dd-MM-yyyy')}"></td>
-				<td><a class="btn btn-danger"  th:href="@{/delete/{id}(id=${repair.id})}">Delete</a></td>
-				<td><a class="btn btn-danger" th:href="@{/edit/{id}(id=${repair.id})}">Edit</a></td>
+				<td><a class="btn btn-warning"  th:href="@{/delete/{id}(id=${repair.id})}">Delete</a></td>
+				<td><a class="btn btn-dark" th:href="@{/edit/{id}(id=${repair.id})}">Edit</a></td>
 			</tr>
 		</tbody>
 	</table>
