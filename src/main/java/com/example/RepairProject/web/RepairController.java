@@ -61,5 +61,9 @@ public class RepairController {
 		model.addAttribute("repairs", repository.findAllByOrderByPriceDesc());
 		return "repairList";
 	}
+	@GetMapping("/login")
+	 public String login() {
+		 return "login";
+	 }
 
 }
