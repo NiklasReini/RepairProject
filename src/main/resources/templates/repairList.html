@@ -17,11 +17,11 @@
 				<td th:text="${repair.description}"></td>
 				<td th:text="${repair.price}"></td>
 				<td th:text="${#dates.format(repair.date, 'dd-MM-yyyy')}"></td>
-				<td><a class="btn btn-warning"  th:href="@{/delete/{id}(id=${repair.id})}">Delete</a></td>
+				<td><a class="btn btn-danger"  th:href="@{/delete/{id}(id=${repair.id})}">Delete</a></td>
 				<td><a class="btn btn-dark" th:href="@{/edit/{id}(id=${repair.id})}">Edit</a></td>
 			</tr>
 		</tbody>
 	</table>
-	<a  class="btn btn-success" th:href="@{/add}">add repair</a>
+	<a  class="btn btn-dark" th:href="@{/add}">add repair</a>
 </body>
 </html>
