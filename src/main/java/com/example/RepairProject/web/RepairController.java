@@ -68,7 +68,7 @@ public class RepairController {
 	 }
 	@GetMapping({"/home","/"})
 	 public String home() {
-		 return "home";
+		 return "redirect:repairList";
 	 }
 
 }
