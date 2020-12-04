@@ -51,11 +51,10 @@ public class RepairController {
 		return "add";
 		
 	}
-	@GetMapping("/sort")
+	@PostMapping("/sort")
 	public String sort() {
-		
 		repository.findAllByOrderByDateDesc();
-		return "repairlist";
+		return "redirect:repairlist";
 	}
 
 }
