@@ -66,7 +66,7 @@ public class RepairController {
 	 public String login() {
 		 return "login";
 	 }
-	@GetMapping("/home")
+	@GetMapping({"/home","/"})
 	 public String home() {
 		 return "home";
 	 }
