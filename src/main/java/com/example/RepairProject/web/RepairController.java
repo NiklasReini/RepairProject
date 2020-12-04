@@ -19,6 +19,7 @@ public class RepairController {
 	private RepairRepository repository;
 	
 	
+	
 	@RequestMapping("/repairList")
 	public String repairList(Model model) {
 		model.addAttribute("repairs", repository.findAll());
@@ -64,6 +65,10 @@ public class RepairController {
 	@GetMapping("/login")
 	 public String login() {
 		 return "login";
+	 }
+	@GetMapping("/home")
+	 public String home() {
+		 return "home";
 	 }
 
 }
