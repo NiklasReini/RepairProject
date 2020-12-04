@@ -51,9 +51,14 @@ public class RepairController {
 		return "add";
 		
 	}
-	@GetMapping("/sort")
+	@GetMapping("/sortByDate")
 	public String sort(Model model) {
 		model.addAttribute("repairs", repository.findAllByOrderByDateDesc());
+		return "repairList";
+	}
+	@GetMapping("/sortByPrice")
+	public String sortPrice(Model model) {
+		model.addAttribute("repairs", repository.findAllByOrderByPriceDesc());
 		return "repairList";
 	}
 

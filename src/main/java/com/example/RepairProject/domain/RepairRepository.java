@@ -9,4 +9,6 @@ public interface RepairRepository extends CrudRepository<Repair, Long> {
 
 	List<Repair> findAllByOrderByDateDesc();
 	
+	List<Repair> findAllByOrderByPriceDesc();
+	
 }
