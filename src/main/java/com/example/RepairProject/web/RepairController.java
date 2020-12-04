@@ -51,10 +51,10 @@ public class RepairController {
 		return "add";
 		
 	}
-	@PostMapping("/sort")
-	public String sort() {
-		repository.findAllByOrderByDateDesc();
-		return "redirect:repairlist";
+	@GetMapping("/sort")
+	public String sort(Model model) {
+		model.addAttribute("repairs", repository.findAllByOrderByDateDesc());
+		return "repairList";
 	}
 
 }
