@@ -11,9 +11,7 @@ import com.example.RepairProject.domain.RepairUser;
 import com.example.RepairProject.domain.UserRepository;
 
 
-/**
- * This class is used by spring security to authenticate and authorize user
- **/
+//this is where the user authentication happens
 @Service
 public class UserService implements UserDetailsService  {
 	private final UserRepository repository;

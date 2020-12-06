@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.RepairProject.domain.Repair;
 import com.example.RepairProject.domain.RepairRepository;
 
-//this is my controller class, here i choose which endpoints lead to which templates
+//this is my controller class, here i choose which endpoints lead to which html files.
 
 @Controller
 public class RepairController {
@@ -47,7 +47,7 @@ public class RepairController {
 	}
 	
 	@GetMapping("/add")
-	public String addBook(Model model) {
+	public String addRepair(Model model) {
 		
 		model.addAttribute("repair", new Repair());	
 

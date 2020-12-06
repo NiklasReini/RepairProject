@@ -12,6 +12,8 @@ import com.example.RepairProject.web.UserService;
 
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
+//here i configure my web apps security like the default login page and the page that loads after successfull login.
+
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity

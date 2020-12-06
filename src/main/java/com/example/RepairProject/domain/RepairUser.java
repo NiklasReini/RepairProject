@@ -1,7 +1,7 @@
 package com.example.RepairProject.domain;
 
 import javax.persistence.*;
-
+//here I create a user entity.
 @Entity
 public class RepairUser {
 
