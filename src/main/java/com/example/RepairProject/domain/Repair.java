@@ -9,6 +9,8 @@ import javax.persistence.Id;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+//this is where i make the Repair entity that is used throughout the app
+
 @Entity
 public class Repair {
 	@Id

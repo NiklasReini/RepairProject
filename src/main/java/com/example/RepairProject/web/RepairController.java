@@ -13,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.RepairProject.domain.Repair;
 import com.example.RepairProject.domain.RepairRepository;
 
+//this is my controller class, here i choose which endpoints lead to which templates
+
 @Controller
 public class RepairController {
 	@Autowired
