@@ -48,7 +48,7 @@ public class RepairController {
 	
 	@GetMapping("/add")
 	public String addRepair(Model model) {
-		
+		model.addAttribute("repairs", repository.findAll());
 		model.addAttribute("repair", new Repair());	
 
 		return "add";
