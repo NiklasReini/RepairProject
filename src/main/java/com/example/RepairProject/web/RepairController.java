@@ -36,6 +36,7 @@ public class RepairController {
 	
 	@GetMapping("/edit/{id}")
 	public String edit(@PathVariable("id")Long repairId, Model model) {
+	model.addAttribute("repairs", repository.findAll());
 	 model.addAttribute("repair", repository.findById(repairId));
 	 return "edit";
 	}
